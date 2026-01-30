@@ -6,6 +6,7 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.ui.builder.UICommandBuilder;
 import com.wolfifurr.interactions.ExecuteCommandInteraction;
+import com.wolfifurr.interactions.SimpleCommandInteraction;
 
 import javax.annotation.Nonnull;
 
@@ -18,6 +19,6 @@ public class SimpleCommandInteractionPlugin extends JavaPlugin {
     @Override
     protected void setup() {
         Interaction.CODEC.register("ExecuteCommand", ExecuteCommandInteraction.class,ExecuteCommandInteraction.CODEC);
-        Interaction.CODEC.register("SimpleCommand", SimpleCommand.class,SimpleCommand.CODEC);
+        Interaction.CODEC.register("SimpleCommand", SimpleCommandInteraction.class,SimpleCommandInteraction.CODEC);
     }
 }
