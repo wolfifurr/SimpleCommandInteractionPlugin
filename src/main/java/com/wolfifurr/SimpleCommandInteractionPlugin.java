@@ -18,5 +18,6 @@ public class SimpleCommandInteractionPlugin extends JavaPlugin {
     @Override
     protected void setup() {
         Interaction.CODEC.register("ExecuteCommand", ExecuteCommandInteraction.class,ExecuteCommandInteraction.CODEC);
+        Interaction.CODEC.register("SimpleCommand", SimpleCommand.class,SimpleCommand.CODEC);
     }
 }
