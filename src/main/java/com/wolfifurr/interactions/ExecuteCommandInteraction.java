@@ -57,6 +57,11 @@ public class ExecuteCommandInteraction extends SimpleBlockInteraction {
                 if (player!=null) {
                     CommandManager.get().handleCommand(ConsoleSender.INSTANCE, (command == null || command.isEmpty()) ? "/say Hello" : command.replace("@s",player.getUsername()));
                 }
+            } else if (command.contains(" @w ")) {
+                String worldName = world.getName();
+                if (worldName!=null) {
+                    CommandManager.get().handleCommand(ConsoleSender.INSTANCE, (command == null || command.isEmpty()) ? "/say Hello" : command.replace("@w",worldName));
+                }
             } else {
                 CommandManager.get().handleCommand(ConsoleSender.INSTANCE, (command == null || command.isEmpty()) ? "/say Hello" : command);
             }
