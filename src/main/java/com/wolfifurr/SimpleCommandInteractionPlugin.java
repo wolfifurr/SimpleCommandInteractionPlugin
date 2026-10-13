@@ -4,13 +4,13 @@ import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import com.hypixel.hytale.server.core.ui.builder.UICommandBuilder;
-import com.wolfifurr.interactions.ExecuteCommandInteraction;
-import com.wolfifurr.interactions.SimpleCommandInteraction;
+import com.wolfifurr.interactions.BlockCommandInteraction;
+import com.wolfifurr.interactions.InstantCommandInteraction;
 
 import javax.annotation.Nonnull;
 
 public class SimpleCommandInteractionPlugin extends JavaPlugin {
+//    public static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
     public SimpleCommandInteractionPlugin(@Nonnull JavaPluginInit init) {
         super(init);
@@ -18,7 +18,7 @@ public class SimpleCommandInteractionPlugin extends JavaPlugin {
 
     @Override
     protected void setup() {
-        Interaction.CODEC.register("ExecuteCommand", ExecuteCommandInteraction.class,ExecuteCommandInteraction.CODEC);
-        Interaction.CODEC.register("SimpleCommand", SimpleCommandInteraction.class,SimpleCommandInteraction.CODEC);
+        Interaction.CODEC.register("BlockCommand", BlockCommandInteraction.class, BlockCommandInteraction.CODEC);
+        Interaction.CODEC.register("InstantCommand", InstantCommandInteraction.class, InstantCommandInteraction.CODEC);
     }
 }
